@@ -15,31 +15,28 @@ public class iPhone {
 
     public void useFeature(String feature, String action) {
         switch (feature) {
-            case "music":
+            case "music" -> {
                 if (action.equals("click ipod")) {
                     musicPlayer.playMusic();
                 } else if (action.equals("stop music")) {
                     musicPlayer.stopMusic();
                 }
-                break;
-            case "call":
+            }
+            case "call" -> {
                 if (action.equals("click telephone")) {
                     phone.makeCall();
                 } else if (action.equals("stop call")) {
                     phone.endCall();
                 }
-                    break;
-            case "web":
-                webBrowser.openPage();
+            }
+            case "web" -> {
                 if (action.equals("click safari")) {
                     webBrowser.openPage();
                 } else if (action.equals("close safari")) {
                     webBrowser.closePage();
                 }
-                    break;
-            default:
-                System.out.println("Unknown feature.");
-                break;
+            }
+            default -> System.out.println("Unknown feature.");
         }
     }
 
